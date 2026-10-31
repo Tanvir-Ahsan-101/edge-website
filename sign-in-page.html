@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="description" content="Sign in to your EDGE reader account and return to useful ideas you want to keep close.">
+  <title>Sign In · EDGE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="signin-standalone">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header signin-header">
+    <a class="wordmark" href="index.html#top" aria-label="EDGE home">EDGE<span>.</span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html#topics">Topics</a><a href="latest-page.html">Latest</a><a href="ebook-page.html">eBooks</a><a href="index.html#about">About</a></nav>
+    <div class="header-account-actions"><a class="header-sign-in" href="sign-in-page.html" aria-current="page">Sign In</a><a class="header-sign-up" href="sign-up-page.html">Sign Up</a></div>
+  </header>
+
+  <main id="main" class="signin-main">
+    <section class="signin-panel" aria-labelledby="signin-title">
+      <div class="signin-form-area">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Welcome back</p>
+        <h1 id="signin-title">Good to see <em>you.</em></h1>
+        <p class="signin-intro">Sign in to return to your EDGE reader account and the ideas you want to keep close.</p>
+
+        <form class="signin-form" data-auth-form="signin">
+          <div class="signin-field">
+            <label for="signin-email">Email address</label>
+            <input id="signin-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+          <div class="signin-field">
+            <div class="signin-password-label">
+              <label for="signin-password">Password</label>
+              <a href="password-reset-page.html">Forgot password?</a>
+            </div>
+            <input id="signin-password" name="password" type="password" autocomplete="current-password" placeholder="Your password" required>
+          </div>
+          <label class="signin-remember" for="signin-remember-me">
+            <input id="signin-remember-me" name="remember" type="checkbox">
+            <span>Keep me signed in on this device</span>
+          </label>
+          <button class="button button-primary signin-submit" type="button" data-auth-trigger>Sign in</button>
+          <button class="signin-signout" type="button" data-auth-signout hidden>Sign out</button>
+          <p class="signin-status" data-auth-status role="status" aria-live="polite">Sign in to your EDGE reader account.</p>
+        </form>
+        <p class="signin-switch">New to EDGE? <a href="sign-up-page.html">Create an account</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer signin-footer">
+    <a class="wordmark footer-wordmark" href="index.html#top" aria-label="EDGE home">EDGE<span>.</span></a>
+    <p>Useful knowledge for a wider view.</p>
+    <nav class="footer-nav" aria-label="Footer navigation"><a href="index.html#topics">Topics</a><a href="latest-page.html">Latest</a><a href="ebook-page.html">eBooks</a><a href="index.html#about">About</a><a href="sign-in-page.html">Sign In</a><a href="sign-up-page.html">Sign Up</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a></nav>
+    <small>© EDGE. Made for people who want to understand more. · <a class="footer-privacy-link" href="privacy-policy.html">Privacy Policy</a> · <a class="footer-privacy-link" href="terms-of-use.html">Terms of Use</a></small>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="auth-config.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
